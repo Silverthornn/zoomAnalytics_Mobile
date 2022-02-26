@@ -5,7 +5,7 @@ import { Card } from 'react-native-elements'
 export default function financialScreen({ navigation }) {
     return (
         <SafeAreaView  >
-        <View style={{ backgroundColor:'rgb(28, 53, 45)', justifyContent:'space-around'}}>
+        <View style={{ backgroundColor:'rgb(28, 53, 45)', }}>
         <View>
             <Text>March</Text>
             <View style={{flexDirection:'row'}}>

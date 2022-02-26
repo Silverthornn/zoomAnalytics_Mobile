@@ -14,12 +14,12 @@ export default function dashBoardScreen({ navigation }) {
     const themes = {
         dark: {
             backgroundColor: 'rgb(28, 53, 45)',
-            backgroundCard: 'rgb(0, 117, 94)',
+            backgroundCard: 'white',
             color: 'rgb(0, 117, 94)'
         },
         light: {
         backgroundColor: 'rgb(28, 53, 45)',
-        backgroundCard: '#fff',
+        backgroundCard: 'black',
         color: 'white'
         }
     }
@@ -59,7 +59,7 @@ export default function dashBoardScreen({ navigation }) {
     return (
         
         <SafeAreaView>
-        <View style={styles.container}>
+        <View >
         <View>
             <Card containerStyle={{width: (windowWidth), height:windowHeight*(1/3), backgroundColor: 'rgb(28, 53, 45)', margin:0 }}>
             <View
@@ -115,9 +115,9 @@ export default function dashBoardScreen({ navigation }) {
                 
             </View>
             <View stlye={{flexDirection:'row', margin: 20}}> 
-                <Text style={{textAlign:'left', fontSize:'20', fontWeight:'500', color:'black'}}>Finance</Text>
+                <Text style={{textAlign:'left', fontSize:'20', fontWeight:'500', color:checked? themes.dark.backgroundCard : themes.light.backgroundCard}}>Finance</Text>
                 <View style={{alignItems:'flex-end', justifyContent:'flex-end', flexDirection:'row'}}>
-                    <Text style={{color:'black'}}>Showing:</Text>
+                    <Text style={{color:checked? themes.dark.backgroundCard : themes.light.backgroundCard}}>Showing:</Text>
                     <RNPickerSelect
                     
                     placeholder={'null'}
@@ -132,7 +132,7 @@ export default function dashBoardScreen({ navigation }) {
                 </View>
             </View>
 
-            <Text style={{color:'black', fontSize:'20', fontWeight:'500'}}>Today</Text>
+            <Text style={{color:checked? themes.dark.backgroundCard : themes.light.backgroundCard, fontSize:'20', fontWeight:'500'}}>Today</Text>
             <View style={{flexDirection:'row', justifyContent:'center', alignItems:'center', marginTop:15, marginBottom:10}}>
                 
                 <Card containerStyle={{width: windowWidth/2 -20, height: (windowHeight/4 -20)/2, backgroundColor:checked? themes.dark.color : themes.light.backgroundColor}}>
